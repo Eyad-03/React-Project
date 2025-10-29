@@ -1,0 +1,330 @@
+.bg
+{
+    direction: rtl;
+    background: radial-gradient(1200px 600px at 80% -10%, #2c6cf5 0%, transparent 60%),
+              linear-gradient(160deg,#1e54d6,#0f2a60 55%);
+}
+
+
+.header
+{
+    text-align: center;
+}
+
+
+.header h1
+{
+    color: white;
+    line-height:1.25; 
+    font-weight:900;
+    font-size: clamp(28px, 5vw, 44px);
+}
+
+.paragraph 
+{
+    text-align: center;
+}
+
+.paragraph p
+{
+  color:rgba(255,255,255,.8);
+  font-size: clamp(15px, 2.3vw, 18px);
+}
+
+.btn-bg
+{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.btn-bg1
+{
+    background-color: #457cf1;
+    color: white;
+    padding: 8px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: none;
+}
+
+.btn-bg2
+{
+    background-color: #ffffff;
+    color: #457cf1;
+    padding: 8px;
+    width: 120px;
+    border-radius: 10px; 
+    font-size: 14px;
+    border: none;
+}
+
+.stats
+{
+    padding-bottom: 40px;
+}
+
+.hero__stats{
+  margin:26px auto 0; padding:14px; list-style:none; display:flex; gap:10px;
+  align-items:center; justify-content:center; flex-wrap:wrap;
+  background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); border-radius:18px;
+  max-width:760px; box-shadow: 0 20px 60px rgba(0,0,0,.35);
+}
+
+.hero__stat{
+  display:flex; flex-direction:column; align-items:center; padding:8px 16px; min-width:150px;
+}
+.hero__statNumber
+{
+font-size:22px;
+font-weight:800;
+color: #457cf1;
+}
+.hero__statLabel
+{
+    font-size:13px;
+    opacity:.9;
+    color: white;
+}
+
+.hero__divider{
+  width:1px; height:32px; background:rgba(255,255,255,.16);
+}
+
+
+.learn-title
+{
+    text-align: center;
+    direction: rtl;
+}
+
+.learn-title h1
+{
+    margin-bottom: 0px;
+}
+
+.learn-title hr
+{
+    width: 150px;
+    border: 2px solid #1e54d6;
+}
+
+.learn-title p
+{
+    width: 500px;
+    margin-top: 30px;
+    margin-right: 500px;
+}
+
+.learn-card
+{
+    text-align: center;
+    width: 280px;
+    border: 2px solid #457cf1;
+    border-radius: 15px;
+    padding: 10px;
+    transition: background-color 0.3s ease , color 0.3s ease, border 0.3s ease;
+}
+
+.learn-card:hover
+{
+    background-color: #1e54d6;
+    color: #ffffff;
+
+}
+
+.learn-card h4
+{
+    margin-top: 0px;
+}
+
+.learn-card p
+{
+    width: 260px;
+    
+}
+
+.logos
+{
+    font-size: 35px;
+}
+
+.cards
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    margin-right:50px ;
+    margin-top: 100px;
+    
+}
+
+.much
+{
+       text-align: center; 
+       margin-top: 100px;
+}
+
+
+.much h1
+{
+    margin-bottom: 0px;
+}
+
+.much hr
+{
+    width: 150px;
+    border: 2px solid #1e54d6;
+}
+
+.much p
+{
+    width: 500px;
+    margin-top: 30px;
+    margin-right: 500px;
+}
+
+.star
+{
+    color: gold;
+}
+
+.detail-offer p
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-offer
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-offer a
+{
+
+    text-decoration: none;
+    color: white;
+    background-color: #457cf1;
+    padding: 8px 15px;
+    border-radius: 12px;
+
+}
+
+.offer-card
+{
+    margin-right: 60px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.15);
+    width: 356px;
+
+}
+
+.img-course
+{
+    border-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    overflow: hidden;
+}
+
+.offer-card img
+{
+
+    transition: transform 0.8s ease; 
+    object-fit: cover;
+    height: 200px;
+    width: 356px;
+    
+}
+
+.offer-card img:hover
+{
+    transform: scale(1.1);
+}
+
+.info p
+{
+    color: rgb(96, 96, 96);
+}
+
+.container-offer
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 80px;
+    
+}
+
+.review-title
+{
+    text-align: center;
+    direction: rtl;
+}
+
+.review-title h1
+{
+    margin-bottom: 0px;
+}
+
+.review-title hr
+{
+    width: 150px;
+    border: 2px solid #1e54d6;
+}
+
+.review-title p
+{
+    width: 500px;
+    margin-top: 30px;
+    margin-right: 500px;
+}
+
+.review-card
+{
+    width: 280px;
+    border: 2px solid #457cf1;
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.review-card h5
+{
+    margin-top: 0px;
+
+}
+
+.review-card p
+{
+    margin-top: 0px;
+    color: rgb(96, 96, 96);
+}
+
+.review-card img
+{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.star-review
+{
+    color: gold !important;
+    font-size: 20px;
+}
+
+.review-grid
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-right: 130px;
+}
+
+.review-container
+{
+    margin-top: 150px;
+    margin-bottom: 120px;
+}

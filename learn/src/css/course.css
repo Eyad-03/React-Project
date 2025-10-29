@@ -1,0 +1,285 @@
+.img-bg1
+{
+width: 150px;
+height: 150px;
+border-radius: 50%;
+position: absolute;
+top: 120px;
+right: 90px;
+}
+
+
+.img-bg2
+{
+    width: 160px;
+    height: 200px;
+    border-radius: 40px;
+    border-top-left-radius: 0px;
+    position: relative;
+    right: 80px;
+    bottom: 30px;
+}
+
+
+.img-bg3
+{
+    width: 200px;
+    height: 250px;
+    border-radius: 40px;
+    border-bottom-right-radius: 0px;
+    position: absolute;
+    left:80px;
+    bottom: 140px;
+   
+}
+
+.note
+{
+    width: 250px;
+    background-color: #FFB900;
+    position: absolute;
+    left: 50px;
+    bottom: 250px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px;
+    border-radius: 50px;
+    border-bottom-left-radius: 0px;
+}
+
+.note-flex
+{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn1-bg
+{
+    background-color: #457cf1;
+    color: white;
+    padding: 10px;
+    width: 220px;
+    border-radius: 10px;
+    font-size: 14px;
+    border: none;
+}
+
+
+.btn2-bg
+{
+    background-color: #ffffff;
+    color: #457cf1;
+    padding: 10px;
+    width: 220px;
+    border-radius: 10px; 
+    font-size: 14px;
+    border: none;
+}
+
+.course-cotainer
+{
+    margin-top: 100px;
+}
+
+.course-cotainer ul
+{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    width: 370px;
+    padding: 15px;
+    margin-right: 560px;
+    margin-top: 80px;
+    border: 1px solid #545454;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.15);
+
+}
+
+.course-cotainer ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
+.course-cotainer ul li a:hover {
+  color: #457cf1;
+  border-bottom: 2px solid #457cf1;
+}
+
+
+.course-cotainer ul a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+
+
+
+.container-course
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+    margin-top: 120px;
+    
+}
+
+.course-card
+{
+    margin-right: 60px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.15);
+    width: 356px;
+
+}
+
+.img-course
+{
+    border-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    overflow: hidden;
+}
+
+.course-card img
+{
+
+    transition: transform 0.8s ease; 
+    object-fit: cover;
+    height: 200px;
+    width: 356px;
+    
+}
+
+.course-card img:hover
+{
+    transform: scale(1.1);
+}
+
+.info p
+{
+    color: rgb(96, 96, 96);
+}
+
+.detail-course p
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-course
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-course a
+{
+
+    text-decoration: none;
+    color: white;
+    background-color: #457cf1;
+    padding: 8px 15px;
+    border-radius: 12px;
+
+}
+
+
+/* Container */
+.roadmap {
+  background: #e3eefa;      /* slate-50 */
+  padding: 40px 16px;
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+.roadmap__inner {
+  max-width: 1060px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* Heading & subtitle */
+.roadmap__title {
+  margin: 0 0 10px;
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 800;
+  color: #0f172a; /* slate-900 */
+  letter-spacing: 0.2px;
+}
+
+.roadmap__subtitle {
+  margin: 0;
+  color: #475569; /* slate-600 */
+  font-size: clamp(13px, 1.6vw, 15px);
+  line-height: 1.9;
+}
+
+.roadmap__link {
+  color: #2563eb; /* blue-600 */
+  font-weight: 600;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 36px;
+  padding: 0 4px;
+  list-style: none;
+}
+
+/* background line across all steps */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 18px; /* aligns with dot center */
+  inset-inline: 0;
+  height: 2px;
+  background: #e5e7eb; /* gray-200 */
+}
+
+/* each step */
+.timeline__step {
+  position: relative;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* dot */
+.timeline__dot {
+  z-index: 1; /* keep above the line */
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #d1d5db; /* gray-300 */
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+/* labels under the dot */
+.timeline__label {
+  margin-top: 14px;
+  color: #475569; /* slate-600 */
+  font-size: 13px;
+  line-height: 1.4;
+}
+.timeline__label > span {
+  display: block;
+  white-space: nowrap;
+}
+
