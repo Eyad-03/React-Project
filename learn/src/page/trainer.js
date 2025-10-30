@@ -21,7 +21,7 @@ export default function Trainer()
 
 return(
 
-<div style={{backgroundColor:'#D7E5FD'}}>
+<div style={{backgroundColor:'rgb(235, 242, 253)'}}>
 
 
 <div className='bg' >

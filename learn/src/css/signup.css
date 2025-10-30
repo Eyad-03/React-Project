@@ -1,114 +1,241 @@
-.container-sign
-{
-    direction: rtl;
-    display: flex;
-    gap: 80px;
-
-    width:67%;
-    padding: 25px;
-    margin: auto;
-    margin-top: 60px;
-    margin-bottom: 50px;
-    box-shadow: 2px 3px 24px #4f7ed0;
-    border-radius: 12px;
-
+/* ====== Base resets & sensible defaults ====== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.field
-{
-    display: flex;
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== Container & two-column layout (desktop first) ====== */
+.container-sign {
+  direction: rtl;
+  display: flex;
+  gap: 80px;
+  width: 67%;
+  padding: 25px;
+  margin: 60px auto 50px;
+  box-shadow: 2px 3px 24px #4f7ed0;
+  border-radius: 12px;
+  background: #fff; /* ensures contrast over patterned pages */
+}
+
+.grid1,
+.grid2 {
+  flex: 1 1 0;
+  min-width: 0; /* prevents overflow from flex children */
+}
+
+/* ====== Logo & imagery ====== */
+.img-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.img-logo img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Ensure any illustration image scales fluidly */
+.grid2 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ====== Headings & text ====== */
+.grid1 h1 {
+  color: #316dd6;
+  margin-top: 0;
+}
+
+/* ====== Form fields ====== */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.field input {
+  width: 100%;               /* fluid */
+  max-width: 360px;          /* prevents over-stretch on wide screens */
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid #316dd6;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.field input:focus {
+  box-shadow: 0 0 0 4px color-mix(in oklab, #316dd6 16%, transparent);
+  border-color: #316dd6;
+}
+
+/* ====== Aux links & actions ====== */
+.remember {
+  text-decoration: none;
+  color: #316dd6;
+  font-size: 14px;
+  padding-top: 10px;
+  display: inline-block;
+}
+
+.btn-reg {
+  margin: 40px 0 20px;
+}
+
+.btn-reg a {
+  display: block;
+  text-decoration: none;
+  background-color: #316dd6;
+  color: #fff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 360px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ====== Divider "إنشاء بواسطة" ====== */
+.create {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.create hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #d9e3f8;
+  margin: 0;
+}
+
+.create p {
+  margin: 0;
+  white-space: nowrap;
+  color: #4d4d4d;
+  font-size: 14px;
+}
+
+/* ====== Social icons ====== */
+.icon-login {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.icon-login a {
+  color: #316dd6;
+  font-size: 48px; /* slightly smaller by default; scales further on mobile */
+}
+
+/* ====== Bottom sign-in hint ====== */
+.have-account {
+  font-size: 15px;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+
+.have-account a {
+  text-decoration: none;
+  color: #316dd6;
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+/* ============================================================
+   ===============   RESPONSIVE BREAKPOINTS   =================
+   ============================================================ */
+
+/* Tablet (≤ 1024px): relax widths & gaps, keep two columns */
+@media (max-width: 1024px) {
+  .container-sign {
+    width: 85%;
+    gap: 40px;
+    padding: 22px;
+    margin-top: 40px;
+  }
+
+  .field input,
+  .btn-reg a {
+    max-width: 100%;
+  }
+
+  .icon-login a {
+    font-size: 42px;
+  }
+}
+
+/* Large mobile / small tablet (≤ 768px): stack columns */
+@media (max-width: 768px) {
+  .container-sign {
+    width: 92%;
+    gap: 24px;
+    padding: 18px;
     flex-direction: column;
-    gap: 10px;
-}
+    align-items: stretch;
+  }
 
-.field input
-{
-    width: 300px;
-    padding: 8px;
-    border-radius: 12px;
-    border: 2px solid #316dd6;
-    transition: border-color .2s ease, box-shadow .2s ease;
-}
+  .img-logo img {
+    width: 100px;
+    height: 100px;
+  }
 
-.field input:focus
-{
-     box-shadow: 0 0 0 4px color-mix(in oklab, #316dd6 16%, transparent);
-     border-color: #316dd6;
-}
+  .grid2 {
+    order: -1; /* show logo/image section first on small screens (optional) */
+  }
 
-.remember
-{
-    text-decoration: none;
-    color: #316dd6;
+  .grid1 h1 {
+    font-size: 22px;
+  }
+
+  .have-account {
+    padding-right: 0;
     font-size: 14px;
-    padding-top: 10px;
-    
+  }
+
+  .icon-login a {
+    font-size: 38px;
+  }
 }
 
-.btn-sign
-{
-    margin: 60px 0px;
-}
+/* Compact mobile (≤ 480px): tighten spacing, hide large hero image */
+@media (max-width: 480px) {
+  .container-sign {
+    width: 94%;
+    padding: 16px;
+    margin: 24px auto;
+    box-shadow: 0 2px 16px rgba(79, 126, 208, 0.45);
+  }
 
+  /* Keep the logo, but hide the secondary (big) illustration if present */
+  .grid2 img:last-child {
+    display: none;
+  }
 
-.btn-sign a
-{
-    text-decoration: none;
-    background-color:#316dd6 ;
-    color: white;
-    padding: 6px;
-    border-radius: 12px;
-    margin-top: 100px;
-    padding: 6px 110px;
-}
+  .btn-reg {
+    margin: 28px 0 12px;
+  }
 
-.img-logo 
-{
-    display: flex;
-    justify-content: center;
-}
+  .icon-login {
+    gap: 12px;
+  }
+  
+  .icon-login a {
+    font-size: 32px;
+  }
 
-.img-logo img
-{
-    width: 120px;
-    height: 120px;
-}
+  .create {
+    gap: 8px;
+  }
 
-.grid1 h1
-{
-    color: #316dd6;
-}
-
-.create 
-{
-    display: flex;
-}
-
-.icon-login
-{
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.icon-login a
-{
-color: #316dd6;
-font-size: 55px;
-}
-
-.have-account
-{
-    font-size: 15px;
-    padding-right: 20px;
-    margin-top: 20px;
-}
-
-.have-account a
-{
-    text-decoration: none;
-    color: #316dd6;
-    font-size: 14px;
-    padding-top: 10px;
+  .create p {
+    font-size: 13px;
+  }
 }

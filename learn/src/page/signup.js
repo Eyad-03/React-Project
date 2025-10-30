@@ -43,7 +43,7 @@ return(
 <Link className='remember'>هل نسيت كلمة السر ؟</Link>
 </div>
 
-<div className='btn-sign'>
+<div className='btn-reg'>
 <Link >تسجيل الدخول</Link>
 </div>
 

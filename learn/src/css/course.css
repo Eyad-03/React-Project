@@ -1,3 +1,30 @@
+.bg{
+  direction: rtl;
+  background: radial-gradient(1200px 600px at 80% -10%, #2c6cf5 0%, transparent 60%),
+              linear-gradient(160deg,#1e54d6,#0f2a60 55%);
+  padding: 24px 16px 48px; /* add breathing room on small screens */
+}
+
+/* ====== Hero ====== */
+.header{ text-align:center; }
+.header h1{
+  color:#fff; line-height:1.25; font-weight:900;
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0;
+}
+
+.paragraph{ text-align:center; }
+.paragraph p{
+  color:rgba(255,255,255,.8);
+  font-size: clamp(15px, 2.3vw, 18px);
+  margin: 8px 0;
+}
+
+.btn-bg{
+  display:flex; gap:16px; justify-content:center; flex-wrap:wrap;
+  margin-top: 10px;
+}
+
 .img-bg1
 {
 width: 150px;
