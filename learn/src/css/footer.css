@@ -1,33 +1,65 @@
-.footer
-{
-    direction: rtl;
-    background: #10264B;
-    display: flex;
-    justify-content: space-between;
+.footer {
+  direction: rtl;
+  background: #10264B;
+  color: #fff;
 
+  /* Mobile-first: stack items */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 24px;
 }
 
-.footer1
-{
-    padding: 10px 25px;
+/* Tablet: 2 columns */
+@media (min-width: 600px) {
+  .footer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    padding: 28px;
+  }
 }
 
-.footer1 img
-{
-    width: 60px;
-    height: 60px;
+/* Desktop: 4 columns */
+@media (min-width: 992px) {
+  .footer {
+    grid-template-columns: 1.25fr 1fr 1fr 1fr;
+    gap: 32px;
+    padding: 32px 40px;
+  }
 }
 
-
-.footer1 p
-{
-    color: white;
-    width: 500px;
-
+.footer1 {
+  padding: 0; /* grid handles spacing */
 }
 
+.footer1 img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+/* Scale logo on bigger screens */
+@media (min-width: 992px) {
+  .footer1 img {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.footer1 p {
+  color: #fff;
+  margin-top: 10px;
+
+  /* Remove fixed width: let it wrap nicely */
+  width: auto;
+  max-width: 52ch;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+/* Social icon pill */
 .uxar-icon {
-
   width: 40px;
   height: 40px;
   display: grid;
@@ -37,8 +69,12 @@
   color: #dfe8fa;
   text-decoration: none;
   box-shadow: 0 0 0 6px #e6ecff22 inset;
-  transition: transform .2s ease, color .2s ease, border-color .2s ease,
-              box-shadow .2s ease, background-color .2s ease;
+  transition:
+    transform .2s ease,
+    color .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease,
+    background-color .2s ease;
 }
 
 .uxar-icon:hover {
@@ -49,24 +85,66 @@
   transform: translateY(-2px);
 }
 
-.icons
-{
-    display: flex;
-    gap: 30px;
-    margin-top: 50px;
+.icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+  flex-wrap: wrap;
 }
 
-.footer2
-{
-    color: white;
+/* Tablet+ larger touch targets */
+@media (min-width: 600px) {
+  .icons {
+    gap: 18px;
+    margin-top: 18px;
+  }
+  .uxar-icon {
+    width: 44px;
+    height: 44px;
+  }
 }
 
-.footer2 p
-{
+/* Column blocks */
+.footer2 h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.05rem;
+  color: #fff;
+}
 
-    font-size: 15px;
-    color: rgb(208, 208, 208);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.footer2 {
+  color: white;
+}
+
+.footer2 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer2 p {
+  font-size: 0.95rem;
+  color: rgb(208, 208, 208);
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* Subtle separators on mobile for clarity */
+.footer2:not(:first-child) {
+  border-top: 1px solid #173566;
+  padding-top: 12px;
+}
+
+/* Remove separators and tighten on wider screens */
+@media (min-width: 600px) {
+  .footer2:not(:first-child) {
+    border-top: none;
+    padding-top: 0;
+  }
+}
+
+/* Make links look clickable if you convert <p> to <Link>/<a> later */
+.footer2 p:hover {
+  color: #ffffff;
+  cursor: pointer;
+  transition: color .2s ease;
 }

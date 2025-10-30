@@ -1,0 +1,114 @@
+.container-sign
+{
+    direction: rtl;
+    display: flex;
+    gap: 80px;
+
+    width:67%;
+    padding: 25px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    box-shadow: 2px 3px 24px #4f7ed0;
+    border-radius: 12px;
+
+}
+
+.field
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field input
+{
+    width: 300px;
+    padding: 8px;
+    border-radius: 12px;
+    border: 2px solid #316dd6;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.field input:focus
+{
+     box-shadow: 0 0 0 4px color-mix(in oklab, #316dd6 16%, transparent);
+     border-color: #316dd6;
+}
+
+.remember
+{
+    text-decoration: none;
+    color: #316dd6;
+    font-size: 14px;
+    padding-top: 10px;
+    
+}
+
+.btn-sign
+{
+    margin: 60px 0px;
+}
+
+
+.btn-sign a
+{
+    text-decoration: none;
+    background-color:#316dd6 ;
+    color: white;
+    padding: 6px;
+    border-radius: 12px;
+    margin-top: 100px;
+    padding: 6px 110px;
+}
+
+.img-logo 
+{
+    display: flex;
+    justify-content: center;
+}
+
+.img-logo img
+{
+    width: 120px;
+    height: 120px;
+}
+
+.grid1 h1
+{
+    color: #316dd6;
+}
+
+.create 
+{
+    display: flex;
+}
+
+.icon-login
+{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icon-login a
+{
+color: #316dd6;
+font-size: 55px;
+}
+
+.have-account
+{
+    font-size: 15px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+
+.have-account a
+{
+    text-decoration: none;
+    color: #316dd6;
+    font-size: 14px;
+    padding-top: 10px;
+}

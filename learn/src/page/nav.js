@@ -32,8 +32,8 @@ return (
 
 
 <div className='btn-nav'>
-    <button>تسجيل الدخول</button>
-    <button>ابدأ التعلم </button>
+    <Link to='/signin'>تسجيل الدخول</Link>
+    <Link>ابدأ التعلم </Link>
 </div>
 
 
