@@ -4,9 +4,40 @@ import Logo from '../image/logop.png'
 import login from '../image/login.jpg'
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useRef,useState } from 'react';
+
 
 export default function Signup()
 {
+
+    const handelFocus = ()=>
+    {
+        if (username=='')
+        {
+            inputUsername.current.focus()
+            alert('username is required')
+        }
+
+         else if ((!email.includes("@")) || (!email.includes("."))) 
+        {
+            inputEmail.current.focus()
+            alert("Please enter a valid email address!");
+         }
+
+         else if (password.length<10) 
+        {
+            inputPassword.current.focus()
+            alert("Please enter a valid password");
+         }
+        } 
+
+    const [username,setUsername]=useState('')
+    const [email,setEmail]=useState('')
+    const [password,setPassword]=useState('')
+
+    const inputUsername=useRef(null)
+    const inputEmail=useRef(null)
+    const inputPassword=useRef(null)
 
 return(
 
@@ -22,21 +53,37 @@ return(
 
 <div className='field'>
 <label> الاسم كامل</label>
-<input type='email' placeholder='البريد الالكتروني'/>
+<input
+ type='email'
+ placeholder='البريد الالكتروني'
+ ref={inputUsername}
+ onChange={(e)=>setUsername(e.target.value)}
+  />
 </div>
 
 <br/>
 
 <div className='field'>
 <label>البريد الالكتروني</label>
-<input type='email' placeholder='البريد الالكتروني'/>
+<input 
+type='email' 
+placeholder='البريد الالكتروني'
+ref={inputEmail}
+onChange={(e)=>setEmail(e.target.value)}
+
+/>
 </div>
 
 <br/>
 
 <div className='field'>
 <label>كلمة المرور</label>
-<input type='password' placeholder='كلمة السر'/>
+<input 
+ type='password'
+ placeholder='كلمة السر'
+ ref={inputPassword}
+ onChange={(e)=>setPassword(e.target.value)}
+ />
 </div>
 
 <div>
@@ -44,7 +91,7 @@ return(
 </div>
 
 <div className='btn-reg'>
-<Link >تسجيل الدخول</Link>
+<Link onClick={handelFocus} >تسجيل الدخول</Link>
 </div>
 
 </form>

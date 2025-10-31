@@ -1,155 +1,107 @@
-/* ===== Base styles (desktop keeps your current look) ===== */
-.header-trainer {
+.header-trainer
+{
     text-align: center;
-    padding: 30px 0;
+    padding: 30px 0px; 
 }
 
-.header-trainer h1 {
+
+.header-trainer h1
+{
     color: white;
-    margin-top: 0;
+    margin-top: 0px;
     padding-top: 10px;
 }
 
-/* Make the paragraph width responsive on large screens too */
-.header-trainer p {
-    color: rgba(255,255,255,.8);
+
+.header-trainer p
+{
+    color:rgba(255,255,255,.8);
+    width: 500px;
     text-align: center;
     margin: auto;
-    width: min(90%, 700px);
 }
 
-.trainer-container {
+
+.trainer-container
+{
     direction: rtl;
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: auto auto auto;
     gap: 30px;
     margin-right: 100px;
-    padding: 60px 0;
-    justify-items: center; /* center cards in their grid cells */
+    padding: 60px 0px
+
 }
 
-.card-trainer {
-    width: 100%;
-    max-width: 320px;       /* prevents overflow on narrow grids */
-    text-align: center;
-    padding: 13px;
-    box-shadow: 0 10px 24px rgba(0,0,0,.15);
-    border-radius: 12px;
-    background: #fff;
-    box-sizing: border-box;
+.card-trainer{
+  width: 100%;
+  max-width: 340px;
+  text-align:center;
+  padding: 18px 18px 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(31,42,55,.10), 0 4px 10px rgba(31,42,55,.06);
+  border: 1px solid rgba(47,107,214,.06);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  position: relative;
+  isolation: isolate;
+}
+.card-trainer::after{
+  /* subtle top highlight */
+  content:"";
+  position:absolute; inset:0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(201,218,255,.35), transparent 26%);
+  pointer-events:none;
+  z-index:0;
+}
+.card-trainer:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(31,42,55,.12), 0 6px 14px rgba(31,42,55,.08);
+  border-color: #C9DAFF;
 }
 
-.border-img {
+.border-img
+{
     border-radius: 50%;
     padding: 3px;
     border: 2px solid #316dd6;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     margin: auto;
 }
 
-.info-trainer img {
+.info-trainer img
+{
     width: 80px;
     height: 80px;
     border-radius: 50%;
 }
 
-.badge span {
-    background-color: #D7E5FD;
-    padding: 6px 12px;
-    border-radius: 12px;
-    margin: auto;
-    display: inline-block; /* keep chip size to content */
+.badge span{
+  background-color: #DDEBFF;
+  color: #2F6BD6;
+  padding: 6px 12px;
+  border-radius: 999px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: .9rem;
 }
 
-.rate-trainer {
+.rate-trainer
+{
     color: gold;
     font-size: 20px;
-    margin: 8px 0 0;
 }
 
-.btn-trainer a {
+.btn-trainer a
+{
     text-decoration: none;
-    color: #fff;
+    color: white;
     background-color: #316dd6;
-    padding: 8px 45px;
+    padding: 6px;
     border-radius: 12px;
-    display: inline-block;
-    transition: transform .15s ease;
-}
-.btn-trainer a:hover { transform: translateY(-1px); }
+    padding: 5px 45px;
 
-/* ===== Tablet (≤ 1024px) ===== */
-@media (max-width: 1024px) {
-    .trainer-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
-        margin-right: 48px;
-        padding: 48px 0;
-    }
-    .header-trainer p {
-        width: min(92%, 640px);
-    }
-}
-
-/* ===== Mobile (≤ 768px) ===== */
-@media (max-width: 768px) {
-    .trainer-container {
-        grid-template-columns: 1fr;   /* single column */
-        gap: 18px;
-        margin-right: 16px;           /* keep RTL feel but smaller margin */
-        padding: 32px 0;
-    }
-    .card-trainer {
-        max-width: 560px;
-        margin-inline: auto;
-        padding: 16px;
-    }
-    .header-trainer {
-        padding: 20px 0;
-    }
-    .header-trainer h1 {
-        font-size: 1.6rem;
-    }
-    .header-trainer p {
-        width: 92%;
-    }
-    .border-img,
-    .info-trainer img {
-        width: 72px;
-        height: 72px;
-    }
-    .btn-trainer a {
-        width: 100%;          /* big easy tap target */
-        padding: 10px 16px;
-    }
-}
-
-/* ===== Small Mobile (≤ 480px) ===== */
-@media (max-width: 480px) {
-    .trainer-container {
-        margin-right: 12px;
-        gap: 14px;
-    }
-    .card-trainer {
-        padding: 14px;
-        border-radius: 14px;
-    }
-    .border-img,
-    .info-trainer img {
-        width: 64px;
-        height: 64px;
-    }
-    .badge span {
-        font-size: 0.9rem;
-        padding: 6px 10px;
-    }
-    .rate-trainer {
-        font-size: 18px;
-    }
-    .btn-trainer a {
-        padding: 12px 14px;
-        border-radius: 10px;
-    }
 }

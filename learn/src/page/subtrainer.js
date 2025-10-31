@@ -25,7 +25,7 @@ return(
 
 <div className='grid-static'>
 
-    <h2> اياد منصور</h2>
+    <h2> {subTrainer.name} </h2>
     <br/>
 
     <div className='static-info'>

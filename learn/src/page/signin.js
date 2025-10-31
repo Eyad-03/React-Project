@@ -4,10 +4,13 @@ import Logo from '../image/logop.png'
 import login from '../image/login.jpg'
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useRef,useState } from 'react';
+
 
 export default function Signin()
 {
 
+    
 return(
 
 <div style={{direction:'rtl'}}>

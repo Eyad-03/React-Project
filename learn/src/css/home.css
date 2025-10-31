@@ -77,15 +77,23 @@ img { max-width: 100%; height: auto; display: block; }
 
 .learn-card{
   text-align:center;
-  border:2px solid #457cf1; border-radius:15px;
-  padding:12px; transition: background-color .3s ease, color .3s ease, border .3s ease;
-  background:#fff; /* better contrast on small screens when hovered off */
+  border:1px solid #3b82f6;
+  border-radius: 16px;
+  padding:16px;
+  transition: background-color .25s ease, color .25s ease, border .25s ease, transform .06s ease;
+  background: #ffffff;
+  box-shadow:  0 3px 10px rgba(15,23,42,.06);
 }
-.learn-card:hover{ background:#1e54d6; color:#fff; }
-.learn-card h4{ margin-top:0; }
-.learn-card p{ max-width: 38ch; margin: 0 auto; }
-.logos{ font-size:35px; }
-
+.learn-card:hover{
+  background: #fff;
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+.learn-card h4{ margin:10px 0 8px 0; }
+.learn-card p{
+  max-width: 42ch; margin: 0 auto; color: #475569;
+}
+.logos{ font-size:36px; color:#3b82f6; line-height: 1; }
 /* ====== Popular courses (offers) ====== */
 .much{ text-align:center; margin-top:100px; padding-inline:16px; }
 .much h1{ margin-bottom:0; }
@@ -154,12 +162,18 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .review-card{
-  border:2px solid #457cf1; text-align:center; padding:12px; border-radius:12px; background:#fff;
+  border:1px solid #3b82f6;
+  text-align:center; padding:16px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow:  0 3px 10px rgba(15,23,42,.06);
+  transition: transform .06s ease, border-color .2s ease;
 }
-.review-card h5{ margin-top:0; }
-.review-card p{ margin-top:0; color:rgb(96,96,96); }
-.review-card img{ width:90px; height:90px; border-radius:50%; margin: 0 auto 8px; }
-.star-review{ color:gold !important; font-size:20px; }
+.review-card:hover{ transform: translateY(-2px); border-color: #3b82f6; }
+.review-card h5{ margin-top:8px; margin-bottom:6px; }
+.review-card p{ margin-top:0; color: #475569; }
+.review-card img{ width:90px; height:90px; object-fit:cover; border-radius:50%; margin: 0 auto 8px; border: 3px solid #eef5ff; }
+.star-review{ color:#f59e0b !important; font-size:20px; }
 
 /* =========================================
    RESPONSIVE BREAKPOINTS
