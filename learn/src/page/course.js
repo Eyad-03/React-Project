@@ -111,11 +111,11 @@ var Course = [
  const filterCourse= selectedCategory==="الكل"?Course:Course.filter((c)=>c.category===selectedCategory)
  
     const steps = [
-    { line1: "فهم تجربة", line2: "المستخدم" },
-    { line1: "دراسة سلوك", line2: "المستخدمين" },
-    { line1: "إنشاء شخصيات", line2: "المستخدم Personas" },
-    { line1: "رحلة المستخدم", line2: "وتخطيط التجربة" },
-    { line1: "تقييم وتحسين", line2: "التجربة" },
+    { line1: " تحديد أهدافك ", line2: "الدراسية" },
+    { line1: " وضع خطة زمنية", line2: "للمذاكرة" },
+    { line1: " فهم الدروس", line2: " لا حفظها" },
+    { line1: " المراجعة المنتظمة", line2: "باستمرار " },
+    { line1: " تقييم وتطوير", line2: "أسلوبك" },
   ];
 
 
@@ -134,7 +134,7 @@ return (
 
 <div className='btn-bg' style={{marginTop:'70px'}}>
     <button className='btn1-bg'>اكتشف مسارات تعليمية</button>
-    <button className='btn2-bg'>اختبر نفسك</button>
+    <button className='btn2-bg'>اكتسب الخبرة</button>
 </div>
 
 <div className='note'>
@@ -143,11 +143,6 @@ return (
     <p className='note-flex'><PiCertificate/> شهادة في نهاية الكورس</p>
 </div>
 
-<div className='img-bg'>
-    <img className='img-bg1' src={mini1}/>
-    <img className='img-bg2' src={mini5}/>
-
-</div>
 
 
 
@@ -158,7 +153,7 @@ return (
 <div className='learn-title'>
 <h1>اختر مسارك التعليمي</h1>
 <hr/>
-<p>نحن نقدم تجربة تعليمية فريدة تجمع بين النظرية والتطبيق العملي، مع التركيز على احتياجات المصممين في منطقة الخليج العربي</p>
+<p>نحن نقدم تجربة تعليمية فريدة تجمع بين النظرية والتطبيق العملي، مع التركيز على احتياجات الطلاب في المنطقة العربية</p>
 </div>
 
 <div className='course-cotainer'>
@@ -204,12 +199,13 @@ return (
     <section className="roadmap" dir="rtl" aria-labelledby="roadmap-title">
       <div className="roadmap__inner">
         <h2 id="roadmap-title" className="roadmap__title">
-          تقدمك خطوة بخطوة
+          تعلّم بذكاء، خطوة بخطوة
         </h2>
 
         <p className="roadmap__subtitle">
-          خريطة تقدم تفاعلية تساعدك على تتبع خطواتك، ومعرفة ما أنجزته وما تبقى لك.
-          <span className="roadmap__link"> كل خطوة تقربك أكثر من هدفك</span>
+          اتّبع خريطة التقدّم التي تساعدك على تنظيم دراستك وتحقيق أفضل النتائج.
+
+          <span className="roadmap__link"> كل خطوة تتقنها تقرّبك من التفوق.</span>
         </p>
 
         <ul className="timeline" role="list">

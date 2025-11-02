@@ -22,7 +22,7 @@ return (
         <li><Link to=''> الرئيسية</Link> </li>
         <li><Link to='/course'> مساراتنا</Link>  </li>
         <li><Link to='/trainer'> مدربينا</Link> </li>
-        <li><Link to=''> تواصل معنا</Link></li>
+        <li><Link to='/contact'> تواصل معنا</Link></li>
     </ul>
 </div>
 
@@ -33,7 +33,7 @@ return (
 
 <div className='btn-nav'>
     <Link to='/signin'>تسجيل الدخول</Link>
-    <Link>ابدأ التعلم </Link>
+    <Link to='/todo'>مهامك اليومية  </Link>
 </div>
 
 

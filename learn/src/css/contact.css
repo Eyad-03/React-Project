@@ -1,0 +1,155 @@
+/* ===== Contact Page – Responsive & Polished ===== */
+
+/* Hero / Background */
+.bg-contact {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(44,108,245,0.55) 0%, rgba(44,108,245,0) 60%),
+    linear-gradient(160deg, #1e54d6 0%, #0f2a60 55%);
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  padding-inline: 16px;
+}
+
+/* Header */
+.header-contact {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.header-contact h1 {
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.header-contact p {
+  color: rgba(255,255,255,0.9);
+  max-width: 48rem; /* ~768px */
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1rem;
+  padding-inline: 6px;
+}
+
+/* Cards Container */
+.container-contact {
+  --gap: 18px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 24px auto 56px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--gap);
+}
+
+/* Card */
+.card-contact {
+  position: relative;
+  text-align: center;
+  padding: 18px 16px 20px;
+  border-radius: 14px;
+  background:
+    radial-gradient(800px 420px at 85% -10%, #2c6cf5 0%, transparent 60%),
+    linear-gradient(160deg, #1e54d6, #0f2a60 55%);
+  box-shadow:
+    0 10px 18px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(255,255,255,0.06);
+  border: none; /* remove hard border */
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  overflow: hidden;
+}
+
+/* Subtle sheen effect */
+.card-contact::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+  pointer-events: none;
+}
+
+.card-contact:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 16px 26px rgba(0,0,0,0.16),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+/* Icon */
+.logo-contact {
+  font-size: 30px;
+  color: #ffffff;
+  display: inline-grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin: 6px auto 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.12);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+/* Text inside card */
+.card-contact h5 {
+  color: #ffffff;
+  margin: 8px 0 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.card-contact p {
+  color: #d8d8d8;
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* ===== Accessibility / Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .card-contact,
+  .card-contact:hover {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* ===== Responsive Typography & Layout ===== */
+
+/* Large screens (≥1200px) */
+@media (min-width: 1200px) {
+  .header-contact h1 { font-size: 2.2rem; }
+  .header-contact p  { font-size: 1.05rem; }
+}
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .header-contact h1 { font-size: 1.9rem; }
+  .header-contact p  { font-size: 1.02rem; }
+  .container-contact  { gap: 16px; }
+}
+
+/* Small tablets / large phones (≤768px) */
+@media (max-width: 768px) {
+  .bg-contact { min-height: 200px; }
+  .header-contact { padding: 28px 0; }
+  .header-contact h1 { font-size: 1.7rem; }
+  .header-contact p  { font-size: 0.98rem; }
+  .container-contact  { margin-top: 16px; }
+}
+
+/* Phones (≤480px) */
+@media (max-width: 480px) {
+  .bg-contact { min-height: 180px; padding-inline: 12px; }
+  .header-contact { padding: 22px 0; }
+  .header-contact h1 { font-size: 1.45rem; }
+  .header-contact p  { font-size: 0.95rem; }
+  .logo-contact { width: 50px; height: 50px; font-size: 26px; border-radius: 10px; }
+  .card-contact { padding: 16px 14px 18px; border-radius: 12px; }
+  .card-contact h5 { font-size: 1rem; }
+  .card-contact p  { font-size: 0.95rem; }
+}

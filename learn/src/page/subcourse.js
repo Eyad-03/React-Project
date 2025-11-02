@@ -11,20 +11,29 @@ import { MdOutlineRateReview } from "react-icons/md";
 const data = [
   {
     title: "محتوى الأسبوع الأول",
-    items: []
+    items: [
+      {text:'الدرس الاول'},
+      {text:'الدرس الثاني'},
+      {text:'الدرس الثالث'},
+      {text:'الدرس الرابع'},
+    ]
   },
   {
     title: "محتوى الأسبوع الثاني",
-    items: []
+    items: [
+      {text:'الدرس الخامس'},
+      {text:'الدرس السادس'},
+      {text:'الدرس السابع'},
+      {text:'الدرس الثامن'},
+    ]
   },
   {
     title: "محتوى الأسبوع الثالث",
     items: [
-      { text: "مقدمة في تجربة المستخدم وأهميتها" },
-      { text: "مراحل عملية تصميم UX" },
-      { text: "البحث الكيفي والكمي (Qualitative & Quantitative Research)" },
-      { text: "إعداد وتنفيذ مقابلات المستخدمين" },
-      { text: "تحليل النتائج واستخلاص الرؤى" }
+      {text:'الدرس التاسع'},
+      {text:'الدرس العاشر'},
+      {text:'الدرس الحادي عشر'},
+      {text:'الدرس الثاني عشر'},
     ]
   }
 ];
@@ -37,7 +46,7 @@ export default function Sub()
   const [subCourseMain,setsubCourse] = React.useState(location.state)
 
 
-  const [openIndex, setOpenIndex] = useState(2); // open week 3 by default (like screenshot)
+  const [openIndex, setOpenIndex] = useState(0); // open week 3 by default (like screenshot)
   const [activeItem, setActiveItem] = useState(2); // highlight the 3rd row by default
 
   const toggle = (i) => setOpenIndex((prev) => (prev === i ? -1 : i));

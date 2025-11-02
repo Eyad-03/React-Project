@@ -9,6 +9,8 @@ import Trainer from './page/trainer';
 import Subtrainer from './page/subtrainer';
 import Signin from './page/signin';
 import Signup from './page/signup';
+import Todo from  './page/todo';
+import Contact from './page/contact';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path='/subtrainer' Component={Subtrainer}/>
         <Route path='/signin' Component={Signin}/>
         <Route path='/signup' Component={Signup}/>
+        <Route path='/todo' Component={Todo}/>
+        <Route path='/contact' Component={Contact}/>
       </Routes> 
     
     <Footer/>

@@ -60,50 +60,60 @@ right: 90px;
    
 }
 
-.note
-{
-    width: 250px;
-    background-color: #FFB900;
-    position: absolute;
-    left: 50px;
-    bottom: 250px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    padding: 8px;
-    border-radius: 50px;
-    border-bottom-left-radius: 0px;
-}
+.note{
 
+  position: absolute;
+  top: 190px;
+  width: 280px;
+  background: linear-gradient(135deg, #ffba08, #ff9100);
+  color: rgb(223, 223, 223);
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 10px 14px;
+  border-radius: 999px 16px 20px 999px; /* fun asymmetric */
+  box-shadow: 0 14px 30px rgba(0,0,0,.22);
+}
 .note-flex
-{
-    display: flex;
-    gap: 8px;
-    align-items: center;
+{ 
+  display:flex;
+  gap: 8px;
+  align-items:center;
+  font-weight:600;
+     
 }
 
-.btn1-bg
-{
-    background-color: #457cf1;
-    color: white;
-    padding: 10px;
-    width: 220px;
-    border-radius: 10px;
-    font-size: 14px;
-    border: none;
+.btn-bg{
+  display:flex; gap:12px; justify-content:center; flex-wrap:wrap;
+  margin-top: 18px;
 }
 
-
-.btn2-bg
-{
-    background-color: #ffffff;
-    color: #457cf1;
-    padding: 10px;
-    width: 220px;
-    border-radius: 10px; 
-    font-size: 14px;
-    border: none;
+.btn1-bg,
+.btn2-bg{
+  padding: 12px 18px;
+  min-width: 210px;
+  border-radius: 12px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+  will-change: transform;
+}
+.btn1-bg{
+  background-color: #3b82f6;
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(59,130,246,.28);
+}
+.btn1-bg:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(59,130,246,.34);
+}
+.btn2-bg{
+  background-color:#ffffff;
+  color:#1e3a8a;
+  border-color: rgba(255,255,255,.2);
+}
+.btn2-bg:hover{
+  background: #e8f1ff;
+  transform: translateY(-2px);
 }
 
 .course-cotainer
@@ -115,6 +125,7 @@ right: 90px;
 {
     list-style: none;
     display: flex;
+    justify-content: center;
     gap: 50px;
     width: 370px;
     padding: 15px;
